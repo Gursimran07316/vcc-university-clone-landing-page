@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(0, 40, 85);
+  font-family: "Mate SC", serif;
+}
+.wrapper {
+  width: 100vw;
+  height: auto;
+  background: rgb(0, 40, 85);
+}
+.white-wrapper {
+  width: 100vw;
+  height: auto;
+  background: white;
+}
+.container {
+  width: 75%;
+  overflow: hidden;
+  margin: auto;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.header-1,
+.header-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: white;
+  flex-wrap: wrap;
+}
+.header-1 nav ul,
+.header-2 ul,
+.search-bar,
+.inline-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-1 nav ul li {
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  background: rgb(77, 77, 77);
+}
+.header-1 nav ul li.blue {
+  background: rgb(81, 179, 180);
+}
+.header-1 nav ul li.green {
+  background: rgb(127, 186, 0);
+}
+.courses-nav li {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-right: 0.5px solid white;
+}
+.courses-nav li:hover {
+  background: rgb(127, 186, 0);
+  border-right: none;
+}
+.search-bar input,
+button {
+  height: 25px;
+  padding: 0.3rem;
+  text-decoration: none;
+  border: none;
+}
+.search {
+  background: rgb(127, 186, 0);
+  color: white;
+}
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.showcase img {
+  width: 100%;
+  max-height: 295px;
+  object-fit: cover;
+}
+.cl-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.cl-2 img {
+  height: 100%;
+}
+.badges {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
+  color: white;
+}
+
+.badges div {
+  padding: 1rem;
+}
+.badges div:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.badges h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+.badges div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.badges div img {
+  height: 100%;
+  width: 100%;
+}
+.blue {
+  background: rgb(81, 179, 180);
+}
+.brown {
+  background: rgb(104, 124, 135);
+}
+.pink {
+  background: rgb(234, 29, 118);
+}
+.green {
+  background: rgb(127, 186, 0);
+}
+.white {
+  background: white;
+  padding: 2rem;
+}
+hr {
+  color: black;
+}
+.white h3 {
+  color: rgb(127, 186, 0);
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+footer {
+  color: white;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  background: rgb(77, 77, 77);
+  font-size: 2rem;
+}
+.inline-list li {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+@media (max-width: 800px) {
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+}
