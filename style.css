@@ -7,13 +7,13 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(0, 40, 85);
   font-family: "Mate SC", serif;
 }
 .wrapper {
   width: 100vw;
   height: auto;
   background: rgb(0, 40, 85);
+  padding-bottom: 2rem;
 }
 .white-wrapper {
   width: 100vw;
@@ -30,7 +30,6 @@ ul {
 }
 a {
   text-decoration: none;
-  color: white;
 }
 .header-1,
 .header-2 {
@@ -51,6 +50,10 @@ a {
   cursor: pointer;
   padding: 0.3rem 0.5rem;
   background: rgb(77, 77, 77);
+}
+.header-2 ul a,
+.inline-list li a {
+  color: white;
 }
 .header-1 nav ul li.blue {
   background: rgb(81, 179, 180);
@@ -142,6 +145,12 @@ button {
   background: white;
   padding: 2rem;
 }
+.dark-grey {
+  background: rgb(77, 77, 77);
+}
+.grey {
+  background: gray;
+}
 hr {
   color: black;
 }
@@ -150,6 +159,59 @@ hr {
   font-size: 2rem;
   text-transform: uppercase;
   margin: 1rem 0;
+}
+.tables {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 2rem 0;
+}
+.tables h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.links li {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.links li a {
+  padding-left: 0.5rem;
+}
+.links li a:hover,
+.info li a:hover,
+.box a:hover {
+  color: rgb(127, 186, 0);
+  text-decoration: underline;
+}
+.info ul {
+  border: 1px solid black;
+  height: auto;
+  padding-bottom: 2rem;
+}
+.info ul li {
+  margin: 0 1rem;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  border-bottom: 1px solid black;
+}
+.info ul li:first-child {
+  margin: 0;
+  padding: 0.5rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+.boxes .box {
+  border: 1px solid black;
+  margin: 1rem;
+}
+.boxes .box h3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 2rem;
+}
+.box div {
+  padding: 1rem;
 }
 footer {
   color: white;
@@ -163,7 +225,8 @@ footer {
   font-size: 0.8rem;
 }
 @media (max-width: 800px) {
-  .showcase {
+  .showcase,
+  .tables {
     grid-template-columns: 1fr;
   }
 }
