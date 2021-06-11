@@ -6,13 +6,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --green: rgb(127, 186, 0);
+  --dark-blue: rgb(0, 40, 85);
+  --light-blue: rgb(81, 179, 180);
+  --light-grey: rgb(104, 124, 135);
+  --brown: rgb(77, 77, 77);
+  --blue: rgb(0, 158, 224);
+  --pink: rgb(234, 29, 118);
+  --grey: rgb(185, 185, 185);
+}
 body {
   font-family: "Mate SC", serif;
 }
 .wrapper {
   width: 100vw;
   height: auto;
-  background: rgb(0, 40, 85);
+  background: var(--dark-blue);
   padding-bottom: 2rem;
 }
 .white-wrapper {
@@ -56,10 +66,10 @@ a {
   color: white;
 }
 .header-1 nav ul li.blue {
-  background: rgb(81, 179, 180);
+  background: var(--light-blue);
 }
 .header-1 nav ul li.green {
-  background: rgb(127, 186, 0);
+  background: var(--green);
 }
 .courses-nav li {
   padding: 0.5rem;
@@ -68,7 +78,7 @@ a {
   border-right: 0.5px solid white;
 }
 .courses-nav li:hover {
-  background: rgb(127, 186, 0);
+  background: var(--green);
   border-right: none;
 }
 .search-bar input,
@@ -79,7 +89,7 @@ button {
   border: none;
 }
 .search {
-  background: rgb(127, 186, 0);
+  background: var(--green);
   color: white;
 }
 .showcase {
@@ -130,32 +140,30 @@ button {
   width: 100%;
 }
 .blue {
-  background: rgb(81, 179, 180);
+  background: var(--blue);
 }
-.brown {
-  background: rgb(104, 124, 135);
-}
+
 .pink {
-  background: rgb(234, 29, 118);
+  background: var(--pink);
 }
 .green {
-  background: rgb(127, 186, 0);
+  background: var(--green);
 }
 .white {
   background: white;
   padding: 2rem;
 }
-.dark-grey {
-  background: rgb(77, 77, 77);
+.light-grey {
+  background: var(--light-grey);
 }
 .grey {
-  background: gray;
+  background: var(--grey);
 }
 hr {
   color: black;
 }
 .white h3 {
-  color: rgb(127, 186, 0);
+  color: var(--green);
   font-size: 2rem;
   text-transform: uppercase;
   margin: 1rem 0;
@@ -180,7 +188,7 @@ hr {
 .links li a:hover,
 .info li a:hover,
 .box a:hover {
-  color: rgb(127, 186, 0);
+  color: var(--green);
   text-decoration: underline;
 }
 .info ul {
@@ -213,10 +221,62 @@ hr {
 .box div {
   padding: 1rem;
 }
+.dark-green-wrapper {
+  width: 100vw;
+  height: auto;
+  background: var(--green);
+}
+.subscribe-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 2rem;
+  padding: 1rem 0;
+}
+
+.sub-box {
+  background: rgb(77, 77, 77);
+  color: white;
+  padding: 1rem 1.5rem;
+  padding-top: 2rem;
+}
+.sub-box .btn-green {
+  background: var(--green);
+  color: white;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  padding-bottom: 1.3rem;
+  font-weight: bold;
+}
+.sub-box .btn-green:hover {
+  opacity: 0.8;
+  border-radius: 1.3rem;
+}
+.subscribe-section a {
+  color: black;
+}
+.subscribe-section a:hover {
+  text-decoration: underline;
+}
+.subscribe-section h3,
+.subscribe-section ul li {
+  margin-bottom: 1rem;
+}
+.subscribe-section h3 {
+  text-transform: uppercase;
+}
+.sub-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+.follow-list {
+  border-left: 1px solid black;
+  padding-left: 1rem;
+}
 footer {
   color: white;
   padding: 1.5rem;
-  margin-top: 1rem;
   background: rgb(77, 77, 77);
   font-size: 2rem;
 }
@@ -226,7 +286,8 @@ footer {
 }
 @media (max-width: 800px) {
   .showcase,
-  .tables {
+  .tables,
+  .subscribe-section {
     grid-template-columns: 1fr;
   }
 }
