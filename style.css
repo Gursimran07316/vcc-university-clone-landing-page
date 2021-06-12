@@ -81,6 +81,7 @@ a {
   background: var(--green);
   border-right: none;
 }
+
 .search-bar input,
 button {
   height: 25px;
@@ -107,9 +108,33 @@ button {
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
 }
-.cl-2 img {
+.cl-2 img,
+.card img {
   height: 100%;
 }
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.back {
+  transform: rotateX(180deg);
+  color: white;
+  padding: 1rem;
+}
+.card:hover {
+  transform: rotateX(180deg);
+}
+
 .badges {
   display: grid;
   grid-template-columns: 1fr;
@@ -138,6 +163,9 @@ button {
 .badges div img {
   height: 100%;
   width: 100%;
+}
+.black {
+  color: var(--dark-blue);
 }
 .blue {
   background: var(--blue);
