@@ -116,8 +116,7 @@ button {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
+  overflow: hidden;
 }
 .front,
 .back {
@@ -125,14 +124,18 @@ button {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  transition: transform 0.8s ease-in-out 0.2s;
 }
 .back {
-  transform: rotateX(180deg);
+  transform: translateY(-100%);
   color: white;
   padding: 1rem;
 }
-.card:hover {
-  transform: rotateX(180deg);
+.card:hover .back {
+  transform: translateY(0);
+}
+.card:hover .front {
+  transform: translateY(100%);
 }
 
 .badges {
